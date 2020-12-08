@@ -10,7 +10,7 @@ namespace Palindrome.Tests
     public void IsPalindrome_IsAPalindrome_True()
     {
       CheckPalindrome testPalindrome = new CheckPalindrome();
-      Assert.AreEqual("wow", testPalindrome.IsPalindrome("wow"));
+      Assert.AreEqual("flower", testPalindrome.IsPalindrome("flower"));
     }
   }
 }
