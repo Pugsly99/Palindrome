@@ -4,7 +4,7 @@ namespace Palindrome
 {
   public class CheckPalindrome
   {
-    public string IsPalindrome(string word)
+    public static string IsPalindrome(string word)
     { 
       char[] charArray = word.ToCharArray();
       int len = word.Length - 1;
@@ -18,17 +18,17 @@ namespace Palindrome
       return new string(charArray);
     }
   }
-}
 public class Program
   {
     static void Main ()
     {
+      Console.WriteLine("Please enter a word");
       string word = Console.ReadLine();
-      IsPalindrome reverseWord =  new IsPalindrome(word);
+      string flippedWord = CheckPalindrome.IsPalindrome(word);
 
-      bool checkWord = reverseWord == word;
+      bool finalWord = word == flippedWord;
 
-      if (checkWord)
+      if (finalWord)
       {
         Console.WriteLine("Is a Palindrome");
       }else
@@ -37,3 +37,4 @@ public class Program
       }
     }
   }
+}
